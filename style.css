@@ -199,6 +199,16 @@ footer {
         height: 40vh;
     }
 
+    .video-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el video llene todo sin deformarse */
+    z-index: -1; /* Envía el video al fondo */
+}
+
     /* Ajusta las tarjetas para que se vean bien */
     .grilla-productos {
         grid-template-columns: 1fr; /* Una columna en móvil */
