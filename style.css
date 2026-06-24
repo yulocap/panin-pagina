@@ -1,5 +1,6 @@
 
 
+
 html {
     scroll-behavior:smooth
 }
@@ -54,7 +55,7 @@ body {
 
 .btn-principal {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 8px 10px;
     background: #ffa600;
     color: #dd0505;
     text-decoration: none;
@@ -71,7 +72,7 @@ body {
 .menu-btn-principal {
     position: absolute;
     top: 10px;    /* Distancia desde arriba */
-    right: 20px;  /* Distancia desde la derecha */
+    right: 10px;  /* Distancia desde la derecha */
     display: flex;
     gap: 10px;    /* Espacio entre los dos botones */
     z-index: 10;  /* Para asegurar que siempre estén encima del video */
@@ -160,7 +161,7 @@ footer {
     right: 20px;
     background-color: #25d366;
     color: white;
-    padding: 10px 12px;
+    padding: 5px 5px;
     border-radius: 100px;
     text-decoration: none;
     font-weight: bold;
@@ -173,11 +174,11 @@ footer {
 }
 .btn-inicio {
     position: fixed;
-    bottom: 30px;
-    right: 120px;
+    bottom: 22px;
+    right: 90px;
     background-color: #ffa600;
     color: #dd0505;
-    padding: 10px 12px;
+    padding: 8px 8px;
     border-radius: 100px;
     text-decoration: none;
     font-weight: bold;
