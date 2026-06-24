@@ -196,7 +196,7 @@ footer {
 
     /* Ajusta el hero para que no sea tan alto en móvil */
     .hero {
-        height: 50vh;
+        height: 40vh;
     }
 
     /* Ajusta las tarjetas para que se vean bien */
