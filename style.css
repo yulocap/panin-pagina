@@ -71,7 +71,7 @@ body {
 .menu-btn-principal {
     position: absolute;
     top: 10px;    /* Distancia desde arriba */
-    right: 17px;  /* Distancia desde la derecha */
+    right: 10px;  /* Distancia desde la derecha */
     display: flex;
     gap: 10px;    /* Espacio entre los dos botones */
     z-index: 10;  /* Para asegurar que siempre estén encima del video */
