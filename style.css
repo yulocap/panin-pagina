@@ -330,3 +330,26 @@ footer { background: #333; color: white; text-align: center; padding: 1rem; }
 @media (prefers-reduced-motion: reduce) {
     .tarjeta, .btn-principal, .carrito-panel { transition: none; }
 }
+
+/* carrucel de los productos para celular */
+/* Esto hace que la grilla de productos se convierta en carrusel en móvil */
+@media (max-width: 600px) {
+    .grilla-productos {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding: 10px;
+        scrollbar-width: none; /* Oculta barra en Firefox */
+    }
+    
+    .grilla-productos::-webkit-scrollbar {
+        display: none; /* Oculta barra en Chrome/Safari */
+    }
+
+    .tarjeta {
+        flex: 0 0 80%; /* Cada tarjeta ocupa el 80% del ancho del móvil */
+        scroll-snap-align: center;
+        margin: 0;
+    }
+}
