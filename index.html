@@ -8,11 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+ 
 <section id="inicio">
     <section class="hero">
-        <video autoplay muted loop playsinline poster="imagenes/PANIN_logo_animation.mp4" class="video-fondo">
-        <source src="imagenes/PANIN_logo_animation.mp4" type="video/mp4">
-        Tu navegador no soporta videos.
+        <video autoplay muted loop playsinline class="video-fondo">
+            <source src="imagenes/PANIN_logo_animation.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
         </video>
         <div class="hero-contenido">
             <h1>Bienvenidos a Nuestro Negocio</h1>
@@ -20,73 +21,219 @@
         </div>
         <div class="menu-btn-principal">
             <a href="#productos" class="btn-principal">Ver Productos</a>
-            <a href="#galeria" class="btn-principal">galeria</a>
-            <a href="#contacto" class="btn-principal">contacto</a>
+            <a href="#galeria" class="btn-principal">Galería</a>
+            <a href="#contacto" class="btn-principal">Contacto</a>
+            <!-- CARRITO: botón que abre el panel -->
+            <button class="btn-principal btn-carrito-abrir" onclick="abrirCarrito()">
+                🛒 Carrito <span class="carrito-contador" id="carrito-contador">0</span>
+            </button>
         </div>
     </section>
 </section>
+ 
 <section id="productos">
-<h2>NUESTROS PRODUCTOS</h2>
+    <h2>NUESTROS PRODUCTOS</h2>
     <div class="grilla-productos">
         <div class="tarjeta">
-            <img src="imagenes/Fideos.jpg" alt="Producto 1">
+            <img src="imagenes/Fideos.jpg" alt="Fideos frescos">
             <h3>Fideos Frescos</h3>
             <p>Descripción breve y deliciosa.</p>
             <p class="precio">$1500</p>
+            <!-- CARRITO: botón añadir -->
+            <button class="btn-agregar" onclick="agregarAlCarrito('Fideos Frescos', 1500)">+ Añadir al carrito</button>
         </div>
         <div class="tarjeta">
-            <img src="imagenes/ravioles.jpg" alt="Producto 2">
+            <img src="imagenes/ravioles.jpg" alt="Ravioles">
             <h3>Ravioles</h3>
             <p>El favorito de nuestros clientes.</p>
             <p class="precio">$2000</p>
+            <button class="btn-agregar" onclick="agregarAlCarrito('Ravioles', 2000)">+ Añadir al carrito</button>
         </div>
     </div>
 </section>
+ 
 <section id="galeria">
-    <h2>GALERIA DE IMÁGENES</h2>
+    <h2>GALERÍA DE IMÁGENES</h2>
     <div class="carrusel" id="carrusel-galeria">
-        <img src="imagenes/fideos.jpg" alt="Imagen 1">
-        <img src="imagenes/ravioles.jpg" alt="Imagen 2">
-        <img src="imagenes/fabricación-de-las-pastas.jpg" alt="Imagen 3">
-        <img src="imagenes/pastorizzata.jpg" alt="Imagen 3">
-        <img src="imagenes/La-tecnologia-a-favor-de-la-produccion.jpg" alt="Imagen 3">
-        <img src="imagenes/pasta-corte-persona-primer-plano.jpg" alt="Imagen 3">
-        <img src="imagenes/produccion-pan-panaderia.jpg" alt="Imagen 1">
-        <img src="imagenes/produccion-pan-panaderia2.jpg" alt="Imagen 1">
-        <img src="imagenes/producción-de-panadería-productos-frescos-alimentos-fábrica-pan9.jpg" alt="Imagen 1">
+        <img src="imagenes/fideos.jpg" alt="Fideos">
+        <img src="imagenes/ravioles.jpg" alt="Ravioles">
+        <img src="imagenes/fabricación-de-las-pastas.jpg" alt="Fabricación de pastas">
+        <img src="imagenes/pastorizzata.jpg" alt="Pastorizzata">
+        <img src="imagenes/La-tecnologia-a-favor-de-la-produccion.jpg" alt="Tecnología de producción">
+        <img src="imagenes/pasta-corte-persona-primer-plano.jpg" alt="Corte de pasta">
+        <img src="imagenes/produccion-pan-panaderia.jpg" alt="Producción panadería">
+        <img src="imagenes/produccion-pan-panaderia2.jpg" alt="Producción panadería 2">
+        <img src="imagenes/producción-de-panadería-productos-frescos-alimentos-fábrica-pan9.jpg" alt="Fábrica de pan">
     </div>
 </section>
+ 
 <section id="contacto">
     <h2>CONTACTO</h2>
-    <table align="center" cellspacing="2">
-        <tr><td><img src="imagenes/location.png" width="23" height="23"></td><td>Mitre 3918, S2000 Rosario, Santa Fe</td></tr>
-        <tr><td><img src="imagenes/whatsapp.png" width="23" height="23"></td><td align="left">5493412014677</td></tr>
-        <tr><td align="center"><img src="imagenes/mail.png" width="23" height="23"></td><td align="left">panifypastas@gmail.com</td></tr>
+    <table class="tabla-contacto" cellspacing="2">
+        <tr>
+            <td><img src="imagenes/location.png" width="23" height="23" alt="Dirección"></td>
+            <td>Mitre 3918, S2000 Rosario, Santa Fe</td>
+        </tr>
+        <tr>
+            <td><img src="imagenes/whatsapp.png" width="23" height="23" alt="WhatsApp"></td>
+            <td>5493412014677</td>
+        </tr>
+        <tr>
+            <td><img src="imagenes/mail.png" width="23" height="23" alt="Email"></td>
+            <td>panifypastas@gmail.com</td>
+        </tr>
     </table>
-        <h2>DONDE ESTAMOS?</h2>
-        <div class="mapa-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.806211714417!2d-60.651454723574496!3d-32.98251417357851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abbe62979d5d%3A0x6d7dada8a7676260!2sMitre%203918%2C%20S2001%20IHH%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1782266310760!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-        </div>
+ 
+    <h2>¿DÓNDE ESTAMOS?</h2>
+    <div class="mapa-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.806211714417!2d-60.651454723574496!3d-32.98251417357851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7abbe62979d5d%3A0x6d7dada8a7676260!2sMitre%203918%2C%20S2001%20IHH%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1782266310760!5m2!1ses-419!2sar"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Ubicación Panin">
+        </iframe>
+    </div>
 </section>
-    <footer>
-        <p>&copy; 2026 - Todos los derechos reservados</p>
-    </footer>
-    <a href="https://wa.me/5493412014677?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="btn-whatsapp" target="_blank">
-     <img src="imagenes/whatsapp.png" align="center" width="35px" height="35px">
-    </a>
-    <a href="#inicio" class="btn-inicio">Inicio</a>
-    <script>
+ 
+<footer>
+    <p>&copy; 2026 - Todos los derechos reservados</p>
+</footer>
+ 
+<!-- Botones flotantes -->
+<a href="https://wa.me/5493412014677?text=Hola,%20me%20gustaría%20hacer%20un%20pedido"
+   class="btn-whatsapp" target="_blank" aria-label="Contactar por WhatsApp">
+    <img src="imagenes/whatsapp.png" width="35" height="35" alt="WhatsApp">
+</a>
+<a href="#inicio" class="btn-inicio">Inicio</a>
+ 
+<!-- ============================================================
+     PANEL DEL CARRITO (modal)
+     ============================================================ -->
+<div class="carrito-overlay" id="carrito-overlay" onclick="cerrarCarrito()"></div>
+ 
+<div class="carrito-panel" id="carrito-panel">
+    <div class="carrito-header">
+        <h3>🛒 Tu Carrito</h3>
+        <button class="carrito-cerrar" onclick="cerrarCarrito()">✕</button>
+    </div>
+ 
+    <div class="carrito-cuerpo" id="carrito-cuerpo">
+        <p class="carrito-vacio">Todavía no agregaste productos.</p>
+    </div>
+ 
+    <div class="carrito-footer">
+        <p class="carrito-total">Total: <strong id="carrito-total">$0</strong></p>
+        <button class="btn-pedido" id="btn-pedido" onclick="hacerPedido()" disabled>
+            Hacer Pedido por WhatsApp 📲
+        </button>
+    </div>
+</div>
+ 
+<!-- ============================================================
+     SCRIPTS
+     ============================================================ -->
+<script>
+    /* ── Carrusel automático ─────────────────────────── */
     const carrusel = document.getElementById('carrusel-galeria');
-    
-    // Función para mover el carrusel automáticamente
     setInterval(() => {
-        // Si llega al final, vuelve al principio
         if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) {
             carrusel.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
             carrusel.scrollBy({ left: 300, behavior: 'smooth' });
         }
-    }, 3000); // 3000 milisegundos = 3 segundos
+    }, 3000);
+ 
+    /* ── Carrito ─────────────────────────────────────── */
+    // Cada item: { nombre, precio, cantidad }
+    let carrito = [];
+ 
+    function agregarAlCarrito(nombre, precio) {
+        const existente = carrito.find(item => item.nombre === nombre);
+        if (existente) {
+            existente.cantidad++;
+        } else {
+            carrito.push({ nombre, precio, cantidad: 1 });
+        }
+        actualizarUI();
+        // Feedback visual: abre el panel brevemente
+        abrirCarrito();
+    }
+ 
+    function quitarDelCarrito(nombre) {
+        carrito = carrito.filter(item => item.nombre !== nombre);
+        actualizarUI();
+    }
+ 
+    function cambiarCantidad(nombre, delta) {
+        const item = carrito.find(i => i.nombre === nombre);
+        if (!item) return;
+        item.cantidad += delta;
+        if (item.cantidad <= 0) quitarDelCarrito(nombre);
+        else actualizarUI();
+    }
+ 
+    function actualizarUI() {
+        const totalItems = carrito.reduce((s, i) => s + i.cantidad, 0);
+        const totalPrecio = carrito.reduce((s, i) => s + i.precio * i.cantidad, 0);
+ 
+        // Contador en el botón
+        document.getElementById('carrito-contador').textContent = totalItems;
+ 
+        // Total
+        document.getElementById('carrito-total').textContent =
+            '$' + totalPrecio.toLocaleString('es-AR');
+ 
+        // Habilitar/deshabilitar botón pedido
+        document.getElementById('btn-pedido').disabled = carrito.length === 0;
+ 
+        // Lista de productos
+        const cuerpo = document.getElementById('carrito-cuerpo');
+        if (carrito.length === 0) {
+            cuerpo.innerHTML = '<p class="carrito-vacio">Todavía no agregaste productos.</p>';
+            return;
+        }
+ 
+        cuerpo.innerHTML = carrito.map(item => `
+            <div class="carrito-item">
+                <div class="carrito-item-info">
+                    <span class="carrito-item-nombre">${item.nombre}</span>
+                    <span class="carrito-item-precio">$${(item.precio * item.cantidad).toLocaleString('es-AR')}</span>
+                </div>
+                <div class="carrito-item-controles">
+                    <button onclick="cambiarCantidad('${item.nombre}', -1)">−</button>
+                    <span>${item.cantidad}</span>
+                    <button onclick="cambiarCantidad('${item.nombre}', 1)">+</button>
+                    <button class="btn-quitar" onclick="quitarDelCarrito('${item.nombre}')">🗑</button>
+                </div>
+            </div>
+        `).join('');
+    }
+ 
+    function abrirCarrito() {
+        document.getElementById('carrito-panel').classList.add('abierto');
+        document.getElementById('carrito-overlay').classList.add('activo');
+    }
+ 
+    function cerrarCarrito() {
+        document.getElementById('carrito-panel').classList.remove('abierto');
+        document.getElementById('carrito-overlay').classList.remove('activo');
+    }
+ 
+    function hacerPedido() {
+        if (carrito.length === 0) return;
+ 
+        const total = carrito.reduce((s, i) => s + i.precio * i.cantidad, 0);
+        const lineas = carrito.map(i =>
+            `• ${i.nombre} x${i.cantidad} = $${(i.precio * i.cantidad).toLocaleString('es-AR')}`
+        ).join('\n');
+ 
+        const mensaje = `Hola! Quiero hacer un pedido:\n\n${lineas}\n\n*Total: $${total.toLocaleString('es-AR')}*`;
+        const url = `https://wa.me/5493412014677?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+    }
 </script>
+ 
 </body>
 </html>
